@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../providers/slider_provider.dart';
+import 'constant.dart';
 
 class CustomCarousel extends StatelessWidget {
   const CustomCarousel({super.key});
@@ -11,7 +12,7 @@ class CustomCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     SliderProvider slider = Provider.of<SliderProvider>(context);
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(top: 8.0),
       child: Column(
         children: [
           CarouselSlider(
@@ -20,7 +21,7 @@ class CustomCarousel extends StatelessWidget {
                 slider.setCurrentIndex(index);
               },
               padEnds: false,
-              viewportFraction: 0.90,
+              viewportFraction: 0.85,
               enableInfiniteScroll: false,
               height: 170.0,
             ),
@@ -42,10 +43,12 @@ class CustomCarousel extends StatelessWidget {
               );
             }).toList(),
           ),
+          const SizedBox(height: 16.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: slider.sliderList.map((i) {
               int index = slider.sliderList.indexOf(i);
+
               return Container(
                 width: 24.0,
                 height: 4.0,
@@ -53,11 +56,72 @@ class CustomCarousel extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(8.0),
-                  color: slider.currentIndex == index ? const Color.fromRGBO(0, 0, 0, 0.9) : const Color.fromRGBO(0, 0, 0, 0.4),
+                  color: slider.currentIndex == index ? activeSliderColor : sliderColor,
                 ),
               );
             }).toList(),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class PlashKa extends StatelessWidget {
+  const PlashKa({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16.0),
+        color: plashkaColor,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Image.asset('assets/images/CircleWavy.png'),
+          const SizedBox(
+            width: 220,
+            child: Text(
+              'Доставка в пределах МКАД, а также в районы Солнцево, Одинцово, Бутово и Щербинка - бесплатно.',
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+              overflow: TextOverflow.clip,
+            ),
+          ),
+          const Center(
+            child: Icon(
+              Icons.navigate_next_rounded,
+              size: 40,
+              color: nextIconColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SearchFilterIcon extends StatelessWidget {
+  const SearchFilterIcon({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Row(
+        children: [
+          const Icon(Icons.search, color: nextIconColor),
+          const SizedBox(width: 10),
+          Image.asset('assets/icons_images/icon-filter.png'),
+          const SizedBox(width: 10),
+          Image.asset('assets/icons_images/icon-heart.png'),
         ],
       ),
     );

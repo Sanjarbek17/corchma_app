@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'subdir/constant.dart';
 import 'subdir/widgets.dart';
 
 class MainPage extends StatefulWidget {
@@ -11,10 +12,26 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
-          CustomCarousel(),
+          const CustomCarousel(),
+          const PlashKa(),
+          const SearchFilterIcon(),
+          Expanded(
+            child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: filters
+                    .map((i) => Builder(
+                          builder: (context) {
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(i),
+                            );
+                          },
+                        ))
+                    .toList()),
+          ),
         ],
       ),
     );
