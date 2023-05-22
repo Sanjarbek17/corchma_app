@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const activeSliderColor = Color.fromRGBO(28, 28, 28, 1);
 const sliderColor = Color.fromRGBO(224, 224, 224, 1);
-const plashkaColor = const Color.fromARGB(255, 243, 235, 207);
+const plashkaColor = Color.fromARGB(255, 243, 235, 207);
 
 const nextIconColor = Color.fromRGBO(130, 130, 130, 1);
 
