@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'subdir/widgets.dart';
+
+import 'subdir/widgets/widgets.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -18,6 +19,8 @@ class _MainPageState extends State<MainPage> {
           PlashKa(),
           SearchFilterIcon(),
           FiltersBar(),
+          SizedBox(height: 5),
+          AllCardsView(),
         ],
       ),
     );
