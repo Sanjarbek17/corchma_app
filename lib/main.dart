@@ -1,3 +1,4 @@
+import 'package:corchma_app/providers/filters_provider.dart';
 import 'package:corchma_app/providers/slider_provider.dart';
 import 'package:corchma_app/screens/main_screen/main_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,9 +16,8 @@ class MainRoute extends StatelessWidget {
     return MaterialApp(
         home: MultiProvider(
       providers: [
-        ChangeNotifierProvider<SliderProvider>(
-          create: (_) => SliderProvider(),
-        ),
+        ChangeNotifierProvider<SliderProvider>(create: (_) => SliderProvider()),
+        ChangeNotifierProvider<FilterProvider>(create: (_) => FilterProvider()),
       ],
       child: const MainPage(),
     ));
