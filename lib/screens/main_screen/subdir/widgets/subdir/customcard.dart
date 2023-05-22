@@ -23,8 +23,11 @@ class CustomCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(16),
       // padding: EdgeInsets.all(6),
-      color: const Color.fromARGB(255, 228, 228, 228),
       // width: 200,
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 228, 228, 228),
+        borderRadius: BorderRadius.circular(18),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,10 +35,50 @@ class CustomCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(
-                imagePath,
-                scale: 0.8,
-                fit: BoxFit.contain,
+              Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(18), topRight: Radius.circular(18)),
+                    child: Image.asset(
+                      imagePath,
+                      scale: 0.8,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Positioned(
+                    top: 6,
+                    left: 6,
+                    child: Container(
+                      width: 36,
+                      height: 20,
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color.fromARGB(255, 206, 18, 5)),
+                      child: const Text(
+                        'ХИТ',
+                        style: TextStyle(color: Colors.white, fontSize: 13),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  const Positioned(
+                    right: 8,
+                    top: 8,
+                    child: Icon(
+                      Icons.favorite,
+                      size: 24,
+                      color: Color.fromARGB(173, 90, 90, 90),
+                      fill: 0.5,
+                    ),
+                  ),
+                  const Positioned(
+                    right: 8,
+                    top: 8,
+                    child: Icon(
+                      Icons.favorite_border_outlined,
+                      size: 24,
+                      color: Colors.white,
+                    ),
+                  )
+                ],
               ),
               const SizedBox(height: 10),
               Padding(
@@ -60,7 +103,7 @@ class CustomCard extends StatelessWidget {
                       minimumSize: MaterialStateProperty.all<Size>(const Size(156, 40)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
+                          borderRadius: BorderRadius.circular(16.0),
                         ),
                       ),
                       backgroundColor: MaterialStateColor.resolveWith((states) => Colors.white),
