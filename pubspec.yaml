@@ -81,7 +81,22 @@ flutter:
   fonts:
     - family:  filter
       fonts:
-        - asset: fonts/filter.ttf
+        - asset: fonts/icon_fonts/filter.ttf
+    - family: menu
+      fonts:
+        - asset: fonts/icon_fonts/menu.ttf
+    - family: menuspec
+      fonts:
+        - asset: fonts/icon_fonts/menuspec.ttf
+    - family: map 
+      fonts:
+        - asset: fonts/icon_fonts/map.ttf
+    - family: action
+      fonts:
+        - asset: fonts/icon_fonts/action.ttf
+    - family: user
+      fonts:
+        - asset: fonts/icon_fonts/user.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

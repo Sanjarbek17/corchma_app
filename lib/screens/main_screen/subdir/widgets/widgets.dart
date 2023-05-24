@@ -17,7 +17,9 @@ class AllCardsView extends StatelessWidget {
     ProductProvider product = Provider.of<ProductProvider>(context);
     return Expanded(
         child: GridView.count(
+            shrinkWrap: true,
             crossAxisCount: 2,
+            physics: const NeverScrollableScrollPhysics(),
             childAspectRatio: 0.75,
             children: product.products
                 .map((product) => CustomCard(
@@ -78,7 +80,7 @@ class CustomCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     SliderProvider slider = Provider.of<SliderProvider>(context);
     return Padding(
-      padding: const EdgeInsets.only(top: 8.0),
+      padding: const EdgeInsets.only(top: 20.0),
       child: Column(
         children: [
           CarouselSlider(

@@ -52,10 +52,12 @@ class CustomCard extends StatelessWidget {
                       width: 36,
                       height: 20,
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color.fromARGB(255, 206, 18, 5)),
-                      child: const Text(
-                        'ХИТ',
-                        style: TextStyle(color: Colors.white, fontSize: 13),
-                        textAlign: TextAlign.center,
+                      child: const Center(
+                        child: Text(
+                          'ХИТ',
+                          style: TextStyle(color: Colors.white, fontSize: 13),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
                   ),

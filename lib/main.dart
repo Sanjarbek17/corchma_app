@@ -21,7 +21,7 @@ class MainRoute extends StatelessWidget {
         ChangeNotifierProvider<FilterProvider>(create: (_) => FilterProvider()),
         ChangeNotifierProvider<ProductProvider>(create: (_) => ProductProvider()),
       ],
-      child: const MainPage(),
+      child: const SafeArea(child: MainPage()),
     ));
   }
 }
