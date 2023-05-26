@@ -1,3 +1,4 @@
+import 'package:corchma_app/providers/bottom_navigation_provider.dart';
 import 'package:corchma_app/providers/filters_provider.dart';
 import 'package:corchma_app/providers/product_provider.dart';
 import 'package:corchma_app/providers/slider_provider.dart';
@@ -20,6 +21,7 @@ class MainRoute extends StatelessWidget {
         ChangeNotifierProvider<SliderProvider>(create: (_) => SliderProvider()),
         ChangeNotifierProvider<FilterProvider>(create: (_) => FilterProvider()),
         ChangeNotifierProvider<ProductProvider>(create: (_) => ProductProvider()),
+        ChangeNotifierProvider<NavigationProvider>(create: (_) => NavigationProvider()),
       ],
       child: const SafeArea(child: MainPage()),
     ));
