@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/filter_model.dart';
-import '../screens/main_screen/subdir/constant.dart' as sub;
+import '../screens/main_screen/constant.dart' as sub;
 
 class FilterProvider with ChangeNotifier {
   // it is gonna public because it is small project
