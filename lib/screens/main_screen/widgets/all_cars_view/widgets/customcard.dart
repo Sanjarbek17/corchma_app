@@ -110,7 +110,33 @@ class CustomCard extends StatelessWidget {
                       ),
                       backgroundColor: MaterialStateColor.resolveWith((states) => Colors.white),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          backgroundColor: Color.fromARGB(255, 178, 56, 21),
+                          // margin: EdgeInsets.all(8),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(16))),
+                          behavior: SnackBarBehavior.floating,
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    Icons.shopping_bag_outlined,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                  Text('2 товара', style: TextStyle(color: Colors.white, fontSize: 16)),
+                                ],
+                              ),
+                              Text('800 p.', style: TextStyle(color: Colors.white, fontSize: 16)),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
                     child: RichText(
                       text: TextSpan(
                         style: const TextStyle(color: Colors.black),
