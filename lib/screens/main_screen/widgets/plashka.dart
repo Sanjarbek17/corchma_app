@@ -20,11 +20,11 @@ class PlashKa extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image.asset('assets/images/CircleWavy.png'),
-          const SizedBox(
+          SizedBox(
             width: 220,
             child: Text(
               'Доставка в пределах МКАД, а также в районы Солнцево, Одинцово, Бутово и Щербинка - бесплатно.',
-              style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: const Color.fromARGB(255, 28, 28, 28)),
               overflow: TextOverflow.clip,
             ),
           ),

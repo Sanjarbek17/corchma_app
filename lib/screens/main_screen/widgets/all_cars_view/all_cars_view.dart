@@ -11,21 +11,20 @@ class AllCardsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ProductProvider product = Provider.of<ProductProvider>(context);
-    return Expanded(
-        child: GridView.count(
-            shrinkWrap: true,
-            crossAxisCount: 2,
-            physics: const NeverScrollableScrollPhysics(),
-            childAspectRatio: 0.75,
-            children: product.products
-                .map((product) => CustomCard(
-                      name: product.name,
-                      imagePath: product.imagePath,
-                      price: product.price,
-                      lastPrice: product.lastPrice,
-                      weight: product.weight,
-                      isHit: product.isHit,
-                    ))
-                .toList()));
+    return GridView.count(
+        shrinkWrap: true,
+        crossAxisCount: 2,
+        physics: const NeverScrollableScrollPhysics(),
+        childAspectRatio: 0.75,
+        children: product.products
+            .map((product) => CustomCard(
+                  name: product.name,
+                  imagePath: product.imagePath,
+                  price: product.price,
+                  lastPrice: product.lastPrice,
+                  weight: product.weight,
+                  isHit: product.isHit,
+                ))
+            .toList());
   }
 }

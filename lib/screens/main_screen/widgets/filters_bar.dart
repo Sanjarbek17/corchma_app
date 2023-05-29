@@ -24,19 +24,33 @@ class FiltersBar extends StatelessWidget {
                     .mapIndexed((index, i) => Builder(
                           builder: (context) {
                             return TextButton(
-                              style: ButtonStyle(padding: MaterialStateProperty.all(const EdgeInsets.only(right: 5))),
+                              style: ButtonStyle(
+                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                    side: const BorderSide(color: Colors.transparent),
+                                  ),
+                                ),
+                                padding: MaterialStateProperty.all(const EdgeInsets.symmetric(horizontal: 10, vertical: 8)),
+                                backgroundColor: filter.currentIndex == index ? MaterialStateProperty.all(const Color.fromARGB(255, 242, 242, 242)) : MaterialStateProperty.all(Colors.transparent),
+                              ),
                               onPressed: () => filter.setCurrentIndex(index),
                               child: Text(
                                 i.name,
-                                style: filter.currentIndex == index ? const TextStyle(color: Colors.red) : const TextStyle(color: Colors.black),
+                                style: filter.currentIndex == index ? Theme.of(context).textTheme.bodyLarge?.copyWith(color: const Color.fromARGB(255, 178, 56, 21)) : Theme.of(context).textTheme.bodyLarge,
                               ),
                             );
                           },
                         ))
                     .toList()),
           ),
-          const SizedBox(height: 5.0),
-          Row(children: [Text(filter.filters[filter.currentIndex].name)]),
+          const SizedBox(height: 24.0),
+          Row(children: [
+            Text(
+              filter.filters[filter.currentIndex].name,
+              style: Theme.of(context).textTheme.titleLarge,
+            )
+          ]),
         ],
       ),
     );

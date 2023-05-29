@@ -6,6 +6,8 @@ import 'package:corchma_app/screens/main_screen/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'source/style.dart';
+
 void main() {
   runApp(const MainRoute());
 }
@@ -16,14 +18,15 @@ class MainRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: theme,
         home: MultiProvider(
-      providers: [
-        ChangeNotifierProvider<SliderProvider>(create: (_) => SliderProvider()),
-        ChangeNotifierProvider<FilterProvider>(create: (_) => FilterProvider()),
-        ChangeNotifierProvider<ProductProvider>(create: (_) => ProductProvider()),
-        ChangeNotifierProvider<NavigationProvider>(create: (_) => NavigationProvider()),
-      ],
-      child: const SafeArea(child: MainPage()),
-    ));
+          providers: [
+            ChangeNotifierProvider<SliderProvider>(create: (_) => SliderProvider()),
+            ChangeNotifierProvider<FilterProvider>(create: (_) => FilterProvider()),
+            ChangeNotifierProvider<ProductProvider>(create: (_) => ProductProvider()),
+            ChangeNotifierProvider<NavigationProvider>(create: (_) => NavigationProvider()),
+          ],
+          child: const SafeArea(child: MainPage()),
+        ));
   }
 }

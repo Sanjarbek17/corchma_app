@@ -1,3 +1,4 @@
+import 'package:corchma_app/source/style.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/all_cars_view/all_cars_view.dart';
@@ -17,17 +18,20 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: ListView(
-          children: const [
-            CustomCarousel(),
-            PlashKa(),
-            SearchFilterIcon(),
-            FiltersBar(),
-            SizedBox(height: 5),
-            AllCardsView(),
-          ],
-        ),
-        bottomNavigationBar: const CustomBottomNavigation());
+    return MaterialApp(
+      theme: theme,
+      home: Scaffold(
+          body: ListView(
+            children: const [
+              CustomCarousel(),
+              PlashKa(),
+              SearchFilterIcon(),
+              FiltersBar(),
+              SizedBox(height: 30),
+              AllCardsView(),
+            ],
+          ),
+          bottomNavigationBar: const CustomBottomNavigation()),
+    );
   }
 }

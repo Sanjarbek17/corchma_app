@@ -97,6 +97,16 @@ flutter:
     - family: user
       fonts:
         - asset: fonts/icon_fonts/user.ttf
+
+    - family: sfpro_bold
+      fonts:
+        - asset: fonts/sf-pro-display-cufonfonts/SFPRODISPLAYBOLD.OTF
+    - family: sfpro_medium
+      fonts:
+        - asset: fonts/sf-pro-display-cufonfonts/SFPRODISPLAYMEDIUM.OTF
+    - family: sfpro_regular
+      fonts:
+        - asset: fonts/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF
   # fonts:
   #   - family: Schyler
   #     fonts:
