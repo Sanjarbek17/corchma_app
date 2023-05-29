@@ -33,11 +33,7 @@ class CustomCarousel extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 13.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(18.0),
-                      child: Image.asset(
-                        i.imagePath,
-                        fit: BoxFit.fill,
-                        scale: 3,
-                      ),
+                      child: Image.asset(i.imagePath, fit: BoxFit.fill, scale: 3),
                     ),
                   );
                 },
