@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class CustomBottomIcon extends StatelessWidget {
   final bool isPressed;
-  final IconData icon;
+  final Image image;
   final Function() onTap;
   const CustomBottomIcon({
     super.key,
     required this.isPressed,
-    required this.icon,
+    required this.image,
     required this.onTap,
   });
 
@@ -16,13 +16,14 @@ class CustomBottomIcon extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
-          icon: Icon(icon, size: 28),
+          iconSize: 28,
+          icon: image,
           onPressed: onTap,
         ),
         Visibility(
           visible: isPressed,
           child: Positioned(
-            bottom: -0.5,
+            bottom: 0,
             left: 20,
             child: Container(
               width: 5,

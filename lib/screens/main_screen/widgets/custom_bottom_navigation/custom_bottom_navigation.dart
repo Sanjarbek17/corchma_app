@@ -27,31 +27,52 @@ class CustomBottomNavigation extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           CustomBottomIcon(
-              icon: FigmaIcons.menu,
+              image: FigmaIcons.menu,
               isPressed: navigationProvider.currentIndex == 0,
               onTap: () {
                 navigationProvider.changeIndex(0);
               }),
           CustomBottomIcon(
-              icon: FigmaIcons.menuspec,
+              image: FigmaIcons.menuspec,
               isPressed: navigationProvider.currentIndex == 1,
               onTap: () {
                 navigationProvider.changeIndex(1);
               }),
           CustomBottomIcon(
-              icon: FigmaIcons.map,
+              image: FigmaIcons.map,
               isPressed: navigationProvider.currentIndex == 2,
               onTap: () {
                 navigationProvider.changeIndex(2);
               }),
+          Stack(children: [
+            CustomBottomIcon(
+                image: FigmaIcons.action,
+                isPressed: navigationProvider.currentIndex == 3,
+                onTap: () {
+                  navigationProvider.changeIndex(3);
+                }),
+            Positioned(
+              top: 6,
+              right: 7,
+              child: Container(
+                width: 16,
+                height: 16,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: const Color.fromARGB(255, 178, 56, 21),
+                ),
+                child: const Center(
+                  child: Text(
+                    '5',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w100),
+                  ),
+                ),
+              ),
+            ),
+          ]),
           CustomBottomIcon(
-              icon: FigmaIcons.action,
-              isPressed: navigationProvider.currentIndex == 3,
-              onTap: () {
-                navigationProvider.changeIndex(3);
-              }),
-          CustomBottomIcon(
-              icon: FigmaIcons.user,
+              image: FigmaIcons.user,
               isPressed: navigationProvider.currentIndex == 4,
               onTap: () {
                 navigationProvider.changeIndex(4);

@@ -3,10 +3,10 @@ import 'package:flutter/widgets.dart';
 class FigmaIcons {
   FigmaIcons._();
 
-  // static const IconData iconFilter = IconData(0xe810, fontFamily: 'filter', fontPackage: null);
-  static const IconData menu = IconData(0xe80c, fontFamily: 'menu', fontPackage: null);
-  static const IconData menuspec = IconData(0xe80d, fontFamily: 'menuspec', fontPackage: null);
-  static const IconData map = IconData(0xe80e, fontFamily: 'map', fontPackage: null);
-  static const IconData action = IconData(0xe80f, fontFamily: 'action', fontPackage: null);
-  static const IconData user = IconData(0xe810, fontFamily: 'user', fontPackage: null);
+  // Image iconFilter = IconData(0xe810, fontFamily: 'filter', fontPackage: null);
+  static Image menu = Image.asset('assets/icons_images/icon-menu.png', scale: 0.5,);
+  static Image menuspec = Image.asset('assets/icons_images/icon-menu-spec.png', scale: 0.5,);
+  static Image map = Image.asset('assets/icons_images/icon-map.png', scale: 0.5,);
+  static Image action = Image.asset('assets/icons_images/icon-action.png', scale: 0.5,);
+  static Image user = Image.asset('assets/icons_images/icon-user.png', scale: 0.5,);
 }
