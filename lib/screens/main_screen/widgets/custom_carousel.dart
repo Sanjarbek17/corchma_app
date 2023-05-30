@@ -15,7 +15,7 @@ class CustomCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     SliderProvider slider = Provider.of<SliderProvider>(context);
     return Padding(
-      padding: const EdgeInsets.only(top: 20.0),
+      padding: const EdgeInsets.only(top: 20.0, left: 16.0),
       child: Column(
         children: [
           CarouselSlider(
@@ -24,9 +24,9 @@ class CustomCarousel extends StatelessWidget {
                 slider.setCurrentIndex(index);
               },
               padEnds: false,
-              viewportFraction: 0.85,
+              viewportFraction: 0.87,
               enableInfiniteScroll: false,
-              height: 170.0,
+              height: 188.0,
             ),
             items: slider.sliderList.map((i) {
               return Builder(
@@ -40,10 +40,10 @@ class CustomCarousel extends StatelessWidget {
                           ));
                     },
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                      // padding: const EdgeInsets.symmetric(horizontal: 13.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(18.0),
-                        child: Image.asset(i.imagePath, fit: BoxFit.fill, scale: 3),
+                        child: Image.asset(i.imagePath, fit: BoxFit.fitWidth),
                       ),
                     ),
                   );

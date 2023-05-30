@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
           body: CustomScrollView(
             slivers: [
               const SliverAppBar(
-                  expandedHeight: 290,
+                  expandedHeight: 310,
                   backgroundColor: Colors.white,
                   // collapsedHeight: 249,
                   flexibleSpace: FlexibleSpaceBar(
