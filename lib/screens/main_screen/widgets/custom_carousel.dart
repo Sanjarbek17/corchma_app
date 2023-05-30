@@ -1,4 +1,3 @@
-import 'package:backdrop_modal_route/backdrop_modal_route.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -33,18 +32,16 @@ class CustomCarousel extends StatelessWidget {
                 builder: (BuildContext context) {
                   return InkWell(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          BackdropModalRoute<void>(
-                            overlayContentBuilder: (context) => ActionPage(sliderModel: i),
-                          ));
+                      // Navigator.push(
+                      //     context,
+                      //     BackdropModalRoute<void>(
+                      //       overlayContentBuilder: (context) => ActionPage(sliderModel: i),
+                      //     ));
+                      showBottomSheet(context: context, builder: (context) => ActionPage(sliderModel: i));
                     },
-                    child: Container(
-                      // padding: const EdgeInsets.symmetric(horizontal: 13.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(18.0),
-                        child: Image.asset(i.imagePath, fit: BoxFit.fitWidth),
-                      ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(18.0),
+                      child: Image.asset(i.imagePath, fit: BoxFit.fitWidth),
                     ),
                   );
                 },
