@@ -1,7 +1,9 @@
+import 'package:backdrop_modal_route/backdrop_modal_route.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'package:corchma_app/screens/action_screen.dart';
 import 'package:corchma_app/providers/slider_provider.dart';
 
 import '../constant.dart';
@@ -29,11 +31,20 @@ class CustomCarousel extends StatelessWidget {
             items: slider.sliderList.map((i) {
               return Builder(
                 builder: (BuildContext context) {
-                  return Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 13.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(18.0),
-                      child: Image.asset(i.imagePath, fit: BoxFit.fill, scale: 3),
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          BackdropModalRoute<void>(
+                            overlayContentBuilder: (context) => ActionPage(sliderModel: i),
+                          ));
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(18.0),
+                        child: Image.asset(i.imagePath, fit: BoxFit.fill, scale: 3),
+                      ),
                     ),
                   );
                 },
