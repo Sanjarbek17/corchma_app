@@ -21,14 +21,36 @@ class _MainPageState extends State<MainPage> {
     return MaterialApp(
       theme: theme,
       home: Scaffold(
-          body: ListView(
-            children: const [
-              CustomCarousel(),
-              PlashKa(),
-              SearchFilterIcon(),
-              FiltersBar(),
-              SizedBox(height: 30),
-              AllCardsView(),
+          body: CustomScrollView(
+            slivers: [
+              const SliverAppBar(
+                  expandedHeight: 290,
+                  backgroundColor: Colors.white,
+                  // collapsedHeight: 249,
+                  flexibleSpace: FlexibleSpaceBar(
+                    background: Column(
+                      children: [
+                        CustomCarousel(),
+                        PlashKa(),
+                      ],
+                    ),
+                  )),
+              const SliverAppBar(
+                backgroundColor: Colors.white,
+                pinned: true,
+                toolbarHeight: 180,
+                flexibleSpace: Column(
+                  children: [
+                    SearchFilterIcon(),
+                    FiltersBar(),
+                  ],
+                ),
+              ),
+              SliverList(
+                  delegate: SliverChildListDelegate([
+                const SizedBox(height: 30),
+                const AllCardsView(),
+              ])),
             ],
           ),
           bottomNavigationBar: const CustomBottomNavigation()),

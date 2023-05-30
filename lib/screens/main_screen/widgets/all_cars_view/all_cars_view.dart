@@ -15,7 +15,7 @@ class AllCardsView extends StatelessWidget {
         shrinkWrap: true,
         crossAxisCount: 2,
         physics: const NeverScrollableScrollPhysics(),
-        childAspectRatio: 0.75,
+        childAspectRatio: 0.72,
         children: product.products
             .map((product) => CustomCard(
                   name: product.name,

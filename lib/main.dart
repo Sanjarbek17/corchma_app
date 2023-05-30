@@ -3,6 +3,7 @@ import 'package:corchma_app/providers/filters_provider.dart';
 import 'package:corchma_app/providers/product_provider.dart';
 import 'package:corchma_app/providers/slider_provider.dart';
 import 'package:corchma_app/screens/main_screen/main_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,6 +19,7 @@ class MainRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: theme,
         home: MultiProvider(
           providers: [

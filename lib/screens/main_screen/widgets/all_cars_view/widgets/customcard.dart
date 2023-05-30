@@ -21,7 +21,7 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(16),
+      margin: const EdgeInsets.all(9),
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 242, 242, 242),
         borderRadius: BorderRadius.circular(18),
