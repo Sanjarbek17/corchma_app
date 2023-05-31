@@ -21,7 +21,6 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(9),
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 242, 242, 242),
         borderRadius: BorderRadius.circular(18),
@@ -60,11 +59,7 @@ class CustomCard extends StatelessWidget {
                   const Positioned(
                     right: 8,
                     top: 8,
-                    child: Icon(
-                      Icons.favorite_border_outlined,
-                      size: 24,
-                      color: Colors.white,
-                    ),
+                    child: Icon(Icons.favorite_border_outlined, size: 24, color: Colors.white),
                   )
                 ],
               ),
@@ -90,7 +85,7 @@ class CustomCard extends StatelessWidget {
                 ElevatedButton(
                     style: ButtonStyle(
                       elevation: MaterialStateProperty.all(0),
-                      minimumSize: MaterialStateProperty.all<Size>(const Size(156, 40)),
+                      minimumSize: MaterialStateProperty.all<Size>(const Size(165, 45)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16.0),

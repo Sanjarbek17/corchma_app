@@ -14,7 +14,7 @@ class CustomCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     SliderProvider slider = Provider.of<SliderProvider>(context);
     return Padding(
-      padding: const EdgeInsets.only(top: 20.0, left: 16.0),
+      padding: const EdgeInsets.only(top: 20.0),
       child: Column(
         children: [
           CarouselSlider(

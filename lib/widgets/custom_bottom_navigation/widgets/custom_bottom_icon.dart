@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomBottomIcon extends StatelessWidget {
   final bool isPressed;
-  final Image image;
+  final SvgPicture image;
   final Function() onTap;
   const CustomBottomIcon({
     super.key,

@@ -21,6 +21,7 @@ class _MainPageState extends State<MainPage> {
     return MaterialApp(
       theme: theme,
       home: Scaffold(
+          backgroundColor: Colors.white,
           body: CustomScrollView(
             slivers: [
               const SliverAppBar(
@@ -36,6 +37,7 @@ class _MainPageState extends State<MainPage> {
                     ),
                   )),
               const SliverAppBar(
+                elevation: 0.0,
                 backgroundColor: Colors.white,
                 pinned: true,
                 toolbarHeight: 180,

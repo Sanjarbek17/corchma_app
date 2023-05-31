@@ -1,12 +1,13 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/svg.dart';
 
 class FigmaIcons {
   FigmaIcons._();
 
-  // Image iconFilter = IconData(0xe810, fontFamily: 'filter', fontPackage: null);
-  static Image menu = Image.asset('assets/icons_images/icon-menu.png', scale: 0.5,);
-  static Image menuspec = Image.asset('assets/icons_images/icon-menu-spec.png', scale: 0.5,);
-  static Image map = Image.asset('assets/icons_images/icon-map.png', scale: 0.5,);
-  static Image action = Image.asset('assets/icons_images/icon-action.png', scale: 0.5,);
-  static Image user = Image.asset('assets/icons_images/icon-user.png', scale: 0.5,);
+  // SvgPicture iconFilter = IconData(0xe810, fontFamily: 'filter', fontPackage: null);
+  static SvgPicture menu = SvgPicture.asset('assets/icons_images/icon-menu (1).svg');
+  static SvgPicture menuspec = SvgPicture.asset('assets/icons_images/icon-menu-spec (1).svg');
+  static SvgPicture map = SvgPicture.asset('assets/icons_images/icon-map (1).svg');
+  static SvgPicture action = SvgPicture.asset('assets/icons_images/icon-action (1).svg');
+  static SvgPicture user = SvgPicture.asset('assets/icons_images/icon-user (1).svg');
+  static SvgPicture right = SvgPicture.asset('assets/icons_images/icon-right (1).svg');
 }

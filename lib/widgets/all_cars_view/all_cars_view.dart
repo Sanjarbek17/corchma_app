@@ -13,6 +13,9 @@ class AllCardsView extends StatelessWidget {
     ProductProvider product = Provider.of<ProductProvider>(context);
     return GridView.count(
         shrinkWrap: true,
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        mainAxisSpacing: 16,
+        crossAxisSpacing: 13,
         crossAxisCount: 2,
         physics: const NeverScrollableScrollPhysics(),
         childAspectRatio: 0.72,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants/main_constant.dart';
+import '../source/figma_custom_icons.dart';
 
 class PlashKa extends StatelessWidget {
   const PlashKa({
@@ -19,7 +21,7 @@ class PlashKa extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset('assets/images/CircleWavy.png'),
+          SvgPicture.asset('assets/images/CircleWavy.svg'),
           SizedBox(
             width: 220,
             child: Text(
@@ -28,12 +30,8 @@ class PlashKa extends StatelessWidget {
               overflow: TextOverflow.clip,
             ),
           ),
-          const Center(
-            child: Icon(
-              Icons.navigate_next_rounded,
-              size: 40,
-              color: nextIconColor,
-            ),
+          Center(
+            child: FigmaIcons.right,
           ),
         ],
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../constants/main_constant.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SearchFilterIcon extends StatelessWidget {
   const SearchFilterIcon({
@@ -13,11 +12,11 @@ class SearchFilterIcon extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Row(
         children: [
-          const Icon(Icons.search, color: nextIconColor),
+          SvgPicture.asset('assets/icons_images/icon-search (1).svg'),
           const SizedBox(width: 10),
-          Image.asset('assets/icons_images/icon-filter.png'),
+          SvgPicture.asset('assets/icons_images/icon-filter (1).svg'),
           const SizedBox(width: 10),
-          Image.asset('assets/icons_images/icon-heart.png'),
+          SvgPicture.asset('assets/icons_images/icon-heart (1).svg'),
         ],
       ),
     );
