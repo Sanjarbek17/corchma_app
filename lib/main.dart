@@ -2,7 +2,7 @@ import 'package:corchma_app/providers/bottom_navigation_provider.dart';
 import 'package:corchma_app/providers/filters_provider.dart';
 import 'package:corchma_app/providers/product_provider.dart';
 import 'package:corchma_app/providers/slider_provider.dart';
-import 'package:corchma_app/screens/main_screen/main_screen.dart';
+import 'package:corchma_app/screens/main_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

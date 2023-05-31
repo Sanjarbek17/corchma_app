@@ -1,12 +1,12 @@
 import 'package:corchma_app/source/style.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/all_cars_view/all_cars_view.dart';
-import 'widgets/custom_bottom_navigation/custom_bottom_navigation.dart';
-import 'widgets/custom_carousel.dart';
-import 'widgets/filters_bar.dart';
-import 'widgets/plashka.dart';
-import 'widgets/search_filter_icon.dart';
+import '../widgets/all_cars_view/all_cars_view.dart';
+import '../widgets/custom_carousel.dart';
+import '../widgets/filters_bar.dart';
+import '../widgets/custom_bottom_navigation/custom_bottom_navigation.dart';
+import '../widgets/plashka.dart';
+import '../widgets/search_filter_icon.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

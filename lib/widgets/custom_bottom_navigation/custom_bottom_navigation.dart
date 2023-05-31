@@ -1,8 +1,9 @@
 import 'package:corchma_app/providers/bottom_navigation_provider.dart';
-import 'package:corchma_app/screens/main_screen/widgets/custom_bottom_navigation/widgets/custom_bottom_icon.dart';
 import 'package:corchma_app/source/figma_custom_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'widgets/custom_bottom_icon.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
   const CustomBottomNavigation({

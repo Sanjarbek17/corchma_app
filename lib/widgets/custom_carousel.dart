@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:corchma_app/screens/action_screen.dart';
 import 'package:corchma_app/providers/slider_provider.dart';
 
-import '../constant.dart';
+import '../constants/main_constant.dart';
 
 class CustomCarousel extends StatelessWidget {
   const CustomCarousel({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constant.dart';
+import '../constants/main_constant.dart';
 
 class PlashKa extends StatelessWidget {
   const PlashKa({
