@@ -13,7 +13,7 @@ class PlashKa extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16.0),
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 11),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.0),
         color: plashkaColor,
@@ -26,7 +26,7 @@ class PlashKa extends StatelessWidget {
             width: 270,
             child: Text(
               'Доставка в пределах МКАД, а также в районы Солнцево, Одинцово, Бутово и Щербинка - бесплатно.',
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: const Color.fromARGB(255, 28, 28, 28), height: 1.1),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: const Color.fromARGB(255, 28, 28, 28), height: 1.1, fontWeight: FontWeight.w500),
               overflow: TextOverflow.clip,
             ),
           ),
