@@ -23,10 +23,10 @@ class PlashKa extends StatelessWidget {
         children: [
           SvgPicture.asset('assets/images/CircleWavy.svg'),
           SizedBox(
-            width: 220,
+            width: 270,
             child: Text(
               'Доставка в пределах МКАД, а также в районы Солнцево, Одинцово, Бутово и Щербинка - бесплатно.',
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: const Color.fromARGB(255, 28, 28, 28)),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: const Color.fromARGB(255, 28, 28, 28), height: 1.1),
               overflow: TextOverflow.clip,
             ),
           ),

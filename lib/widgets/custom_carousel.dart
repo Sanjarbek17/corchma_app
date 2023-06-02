@@ -16,6 +16,7 @@ class CustomCarousel extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 20.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CarouselSlider(
             options: CarouselOptions(
@@ -23,9 +24,10 @@ class CustomCarousel extends StatelessWidget {
                 slider.setCurrentIndex(index);
               },
               padEnds: false,
-              viewportFraction: 0.87,
+              aspectRatio: 20.0 / 9.75,
+              viewportFraction: 0.89,
               enableInfiniteScroll: false,
-              height: 188.0,
+              // height: 199.0,
             ),
             items: slider.sliderList.map((i) {
               return Builder(
@@ -48,7 +50,7 @@ class CustomCarousel extends StatelessWidget {
               );
             }).toList(),
           ),
-          const SizedBox(height: 16.0),
+          const SizedBox(height: 20.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: slider.sliderList.map((i) {

@@ -19,13 +19,14 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: theme,
       home: Scaffold(
           backgroundColor: Colors.white,
           body: CustomScrollView(
             slivers: [
               const SliverAppBar(
-                  expandedHeight: 310,
+                  expandedHeight: 330,
                   backgroundColor: Colors.white,
                   // collapsedHeight: 249,
                   flexibleSpace: FlexibleSpaceBar(
