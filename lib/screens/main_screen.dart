@@ -16,6 +16,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  bool isSCrolling = true;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +27,7 @@ class _MainPageState extends State<MainPage> {
           body: CustomScrollView(
             slivers: [
               const SliverAppBar(
-                  expandedHeight: 330,
+                  expandedHeight: 370,
                   backgroundColor: Colors.white,
                   // collapsedHeight: 249,
                   flexibleSpace: FlexibleSpaceBar(
@@ -51,7 +52,6 @@ class _MainPageState extends State<MainPage> {
               ),
               SliverList(
                   delegate: SliverChildListDelegate([
-                const SizedBox(height: 30),
                 const AllCardsView(),
               ])),
             ],

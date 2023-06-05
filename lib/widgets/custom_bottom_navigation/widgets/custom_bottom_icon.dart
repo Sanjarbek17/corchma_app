@@ -14,26 +14,28 @@ class CustomBottomIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        IconButton(
-          iconSize: 28,
-          icon: image,
-          onPressed: onTap,
-        ),
-        Visibility(
-          visible: isPressed,
-          child: Positioned(
-            bottom: 0,
-            left: 20,
-            child: Container(
-              width: 5,
-              height: 5,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: Colors.red),
+    return LayoutBuilder(builder: (context, constraints) {
+      return Stack(
+        children: [
+          IconButton(
+            iconSize: 28,
+            icon: image,
+            onPressed: onTap,
+          ),
+          Visibility(
+            visible: isPressed,
+            child: Positioned(
+              bottom: 0,
+              left: constraints.maxHeight / 2 - 8.8,
+              child: Container(
+                width: 5,
+                height: 5,
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: Colors.red),
+              ),
             ),
           ),
-        ),
-      ],
-    );
+        ],
+      );
+    });
   }
 }

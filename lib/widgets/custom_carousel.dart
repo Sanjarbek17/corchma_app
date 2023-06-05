@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:collection/collection.dart';
 
 import 'package:corchma_app/screens/action_screen.dart';
 import 'package:corchma_app/providers/slider_provider.dart';
@@ -23,26 +24,24 @@ class CustomCarousel extends StatelessWidget {
                 slider.setCurrentIndex(index);
               },
               padEnds: false,
-              aspectRatio: 20.0 / 9.75,
-              viewportFraction: 0.89,
+              aspectRatio: 370 / 185,
+              viewportFraction: 0.90,
               enableInfiniteScroll: false,
               // height: 199.0,
             ),
-            items: slider.sliderList.map((i) {
+            items: slider.sliderList.mapIndexed((index, i) {
               return Builder(
                 builder: (BuildContext context) {
                   return InkWell(
                     onTap: () {
-                      // Navigator.push(
-                      //     context,
-                      //     BackdropModalRoute<void>(
-                      //       overlayContentBuilder: (context) => ActionPage(sliderModel: i),
-                      //     ));
                       showBottomSheet(context: context, builder: (context) => ActionPage(sliderModel: i));
                     },
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(18.0),
-                      child: Image.asset(i.imagePath, fit: BoxFit.fitWidth),
+                    child: Padding(
+                      padding: index == slider.sliderList.length - 1 ? const EdgeInsets.only(right: 16.0, left: 16.0) : const EdgeInsets.only(left: 16.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(18.0),
+                        child: Image.asset(i.imagePath, fit: BoxFit.fitHeight),
+                      ),
                     ),
                   );
                 },
